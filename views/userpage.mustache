@@ -6,8 +6,45 @@
     <link rel="stylesheet" href="./public/styles.css">
   </head>
   <body>
-    <img src alt="">
-    <h1>{{name}}</h1>
-    <p>{{address.city}}, {{address.country}}</p>
+    <section class="userWrapper">
+      {{#users}}
+        <section class="topHalf">
+          <div class="one">
+            <img id="userImg" src="{{avatar}}" alt="">
+          </div>
+          <div class="two">
+            <span>{{name}}</span>
+            {{#address.city}}
+              <p>{{address.city}}, {{address.country }} |
+            {{/address.city}}
+            {{^address.city}}
+              {{address.country }} |
+            {{/address.city}}
+            {{#job}}
+              {{ job}}, {{company}}</p>
+              <p>{{email }} | {{ phone}}</p>
+            {{/job}}
+            {{^job}}
+              <span>Available for hire</span>
+              <p>{{email }} | {{ phone}}</p>
+            {{/job}}
+          </div>
+        </section>
+        <section class="bottomHalf">
+          <div class="three">
+            {{#university}}
+              <p><strong>Education</strong> {{university}}</p>
+            {{/university}}
+          </div>
+          <div class="four">
+            <strong><p>Skills</p></strong>
+              {{#skills}}
+                {{.}}
+              {{/skills}}
+          </div>
+        </section>
+      {{/users}}
+
+    </section>
   </body>
 </html>

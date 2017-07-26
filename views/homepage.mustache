@@ -6,15 +6,22 @@
     <link rel="stylesheet" href="./public/styles.css">
   </head>
   <body>
-    {{#users}}
-      <img src="{{avatar}}" alt="">
-      <a href="./{{id}}"><h3>{{name}}</h3></a>
-      {{#job}}
-        <p>{{job}}, {{company}}</p>
-      {{/job}}
-      {{^job}}
-        <p>Available for hire!</p>
-      {{/job}}
-    {{/users}}
+    <section class="wrapper">
+      <ul>
+        {{#users}}
+          <li>
+            <img src="{{avatar}}" alt="">
+            <a href="./{{id}}"><h3>{{name}}</h3></a>
+            {{#job}}
+              <p>{{job}}, {{company}}</p>
+            {{/job}}
+            {{^job}}
+              <p id="noJob">Available for hire</p>
+            {{/job}}
+          </li>
+        {{/users}}
+      </ul>
+    </section>
+
   </body>
 </html>

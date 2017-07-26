@@ -1,3 +1,121 @@
-body {
+html, body {
+  box-sizing: border-box;
   font-family: sans-serif;
+  margin: 0;
+}
+
+.wrapper {
+  font-weight: 400;
+  letter-spacing: .5px;
+  border-radius: 3px;
+  height: 100%;
+  text-align: left;
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+li {
+  border: 1px solid black;
+  margin: 10px 20px;
+  padding: 0 9px;
+  height: 100%;
+  width: 240px;
+}
+
+h4 {
+}
+
+#noJob {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+  color: #427FCA;
+}
+
+img {
+  width: 100%;
+  height: 140px;
+}
+
+p {
+  color: #7C7875;
+}
+
+#userImg {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 150px;
+  height: 170px;
+}
+
+.userWrapper {
+  justify-content: center;
+  font-weight: 400;
+  letter-spacing: .5px;
+  border-radius: 3px;
+  height: 100%;
+  text-align: left;
+  margin: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+.topHalf {
+  display: flex;
+  flex-flow: nowrap row;
+
+}
+
+.topHalf p {
+  color: black;
+}
+
+.bottomHalf {
+  display: flex;
+  flex-flow: column;
+  justify-content: left;
+}
+
+.one {
+  width: auto;
+  margin: 0 30px;
+}
+
+.two {
+  margin: 0 30px;
+}
+
+.one , span {
+  font-size: 40px;
+}
+
+.three {
+  display: flex;
+  flex-flow: column;
+}
+
+.three , p {
+  color: black;
+}
+
+.four {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.four p {
+  margin-right: 5px;
 }

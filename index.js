@@ -24,7 +24,7 @@ app.get('/:id', function(req, res) {
   let foundUser = userData.users.find(function(user){
     return user.id == req.params.id;
   });
-  res.render('homepage', { users: [foundUser]});
+  res.render('userpage', { users: [foundUser]});
 })
 
 app.listen(3000, function(req, res){
